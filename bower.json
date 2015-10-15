@@ -1,0 +1,11 @@
+{
+  "name": "cellular",
+  "version": "0.0.1",
+  "authors": "zswang",
+  "dependencies": {
+    "jpaths": "^0.0.7",
+    "jmaths": "^0.0.3"
+  },
+  "private": true,
+  "license": "MIT"
+}

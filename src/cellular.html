@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>cellular</title>
+  <script src="../bower_components/jpaths/jpaths.js"></script>
+  <script src="../bower_components/jmaths/jmaths.js"></script>
+  <script src="cellular.js"></script>
+  <style>
+#canvas {
+  border: solid 1px #ccc;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  float: left;
+}
+  </style>
+</head>
+<body>
+  <div id="canvas"></div>
+  <button id="next">next</button>
+  <button id="prev">prev</button>
+  <script>
+(function() {
+  var hexagon1 = cellular.createHexagon({
+    center: [100, 100],
+    container: document.querySelector('#canvas')
+  });
+  var hexagon2 = cellular.createHexagon({
+    center: [220, 100],
+    container: document.querySelector('#canvas')
+  });
+  var hexagon3 = cellular.createHexagon({
+    center: [160, 205],
+    container: document.querySelector('#canvas')
+  });
+  var hexagon4 = cellular.createHexagon({
+    center: [280, 205],
+    container: document.querySelector('#canvas')
+  });
+  document.querySelector('#next').addEventListener('click', function() {
+    hexagon1.rotateBy(1);
+    hexagon2.rotateBy(1);
+    hexagon3.rotateBy(1);
+  });
+  document.querySelector('#prev').addEventListener('click', function() {
+    hexagon1.rotateBy(-1);
+    hexagon2.rotateBy(-1);
+    hexagon3.rotateBy(-1);
+  });
+})();
+</script>
+</body>
+</html>
